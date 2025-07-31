@@ -5,233 +5,474 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - BUGDEEN</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Prompt:wght@400;700&display=swap');
-        body {
-            background: #1e1e1e;
-            color: #d4d4d4;
-            font-family: 'Fira Mono', 'Prompt', 'Consolas', monospace;
-            margin: 0;
-            min-height: 100vh;
-        }
-        .portfolio-container {
-            max-width: 900px;
-            margin: 48px auto 32px auto;
-            background: #252526;
-            border-radius: 12px;
-            box-shadow: 0 0 32px 8px #007acc44;
-            padding: 48px 40px 40px 40px;
-            border: 2.5px solid #007acc;
-            position: relative;
-        }
-        h1 {
-            font-size: 2.6rem;
-            color: #007acc;
-            letter-spacing: 2px;
-            font-family: 'Fira Mono', 'Prompt', monospace;
-            margin-bottom: 18px;
-            border-left: 10px solid #007acc;
-            padding-left: 20px;
-            text-shadow: 0 0 24px #007acc99;
-        }
-        .profile-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-bottom: 36px;
-            flex-wrap: wrap;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 4px solid #007acc;
-            box-shadow: 0 0 32px 8px #007acccc, 0 0 8px 2px #181818;
-            background: #232526;
-            animation: borderGlowVS 2s infinite alternate;
-        }
-        @keyframes borderGlowVS {
-            0% { box-shadow: 0 0 0 6px #007acc88, 0 4px 12px #007acc44; border-color: #007acc;}
-            50% { box-shadow: 0 0 32px 16px #007acccc, 0 4px 24px #00cfffcc; border-color: #00cfff;}
-            100% { box-shadow: 0 0 0 6px #007acc88, 0 4px 12px #007acc44; border-color: #007acc;}
-        }
-        .profile-info {
-            flex: 1;
-            font-size: 1.18rem;
-            color: #d4d4d4;
-            background: #1e1e1e;
-            border-radius: 12px;
-            padding: 22px 18px;
-            border: 1.5px solid #007acc;
-            font-family: 'Fira Mono', 'Prompt', monospace;
-            box-shadow: 0 0 16px 2px #007acc22;
-        }
-        .profile-info strong {
-            color: #00cfff;
-        }
-        section {
-            margin-top: 36px;
-        }
-        section h2 {
-            color: #007acc;
-            font-size: 1.5rem;
-            margin-bottom: 14px;
-            font-family: 'Fira Mono', monospace;
-            border-left: 6px solid #007acc;
-            padding-left: 12px;
-            text-shadow: 0 0 12px #007acc99;
-        }
-        ul.skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        ul.skills-list li {
-            background: #1e1e1e;
-            color: #d4d4d4;
-            border: 2px solid #007acc;
-            border-radius: 8px;
-            padding: 10px 22px;
-            font-family: 'Fira Mono', monospace;
-            font-size: 1.08rem;
-            margin-bottom: 8px;
-            box-shadow: 0 2px 8px #007acc22;
-        }
-        .edu-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 12px;
-            background: #232526;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .edu-table th, .edu-table td {
-            padding: 10px 8px;
-            border-bottom: 1px solid #007acc44;
-            color: #d4d4d4;
-            font-family: 'Fira Mono', monospace;
-        }
-        .edu-table th {
-            background: #1e1e1e;
-            color: #00cfff;
-        }
-        .edu-table tr:last-child td {
-            border-bottom: none;
-        }
-        .works-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .works-list li {
-            background: #1e1e1e;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            color: #d4d4d4;
-            font-family: 'Fira Mono', monospace;
-            font-size: 1.08rem;
-            box-shadow: 0 0 16px 2px #007acc33;
-            border: 2px solid #007acc;
-            position: relative;
-            padding: 18px 24px 18px 48px;
-            overflow: hidden;
-        }
-        .works-list li::before {
-            content: ">";
-            position: absolute;
-            left: 18px;
-            top: 18px;
-            color: #00cfff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-shadow: 0 0 8px #007acccc;
-            animation: blinkCode 1.2s infinite alternate;
-        }
-        @keyframes blinkCode {
-            0% { opacity: 1; }
-            100% { opacity: 0.6; }
-        }
-        .about-section {
-            background: #232526;
-            border-radius: 10px;
-            padding: 24px 18px;
-            margin-top: 32px;
-            border: 1.5px solid #007acc;
-            box-shadow: 0 0 16px 2px #007acc22;
-            color: #d4d4d4;
-            font-size: 1.12rem;
-        }
-        .contact-links {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-            margin-top: 18px;
-            justify-content: flex-end;
-        }
-        .contact-link {
-            display: inline-block;
-            padding: 10px 24px;
-            background: #007acc;
-            color: #fff;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.08rem;
-            border: none;
-            box-shadow: 0 2px 8px #007acc22;
-            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-            text-align: center;
-            font-family: 'Fira Mono', monospace;
-            animation: pulseContact 2.2s infinite alternate;
-        }
-        .contact-link:hover {
-            background: #00cfff;
-            color: #232526;
-            box-shadow: 0 4px 24px #007acc99;
-        }
-        @keyframes pulseContact {
-            0% { box-shadow: 0 2px 8px #007acc22; }
-            50% { box-shadow: 0 0 24px #007acc99; }
-            100% { box-shadow: 0 2px 8px #007acc22; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="portfolio-container">
-        <h1>About BUGDEEN</h1>
-        <div class="profile-row">
-            <img class="profile-img" src="img/IMG_0608.jpg" alt="รูปโปรไฟล์"
-                 onerror="this.onerror=null;this.src='img/images.jpg';">
-            <div class="profile-info">
-                <p><strong>ชื่อ:</strong> นาย กฤตภาส จันทร์กุล (BUGDEEN)</p>
-                <p><strong>อายุ:</strong> 16 ปี</p>
-                <p><strong>โรงเรียน:</strong> เบญจมราชรังสฤษฎิ์ 2 ฉะเชิงเทรา</p>
-            </div>
-        </div>
-        <div class="about-section">
-            <h2 style="color:#007acc;">About</h2>
-            <p>
-                สวัสดีครับ ผม ภูมิ หรือ กฤตภาส จันทร์กุล<br>
-                สนใจด้านitเพื่อที่จะศึกษา<br>
-                เวลาว่างส่วนใหญ่ชอบเล่นเกมเป็นชีวิตจิตใจ<br>
-                ส่วนด้านกีฬา ชอบเล่นแบตมินตันและกําจะฝึกตีกลอฟครับ
-                เป็นคนที่ชอบรถมากก<br>
-            </p>
-        </div>
-        <section>
-            <h2>Contact</h2>
-            <div class="contact-links" style="justify-content:center; gap:32px;">
-                <a class="contact-link" href="https://www.instagram.com/bugdeen/" target="_blank">Instagram: bugdeen</a>
-                <a class="contact-link" href="https://www.tiktok.com/@bugdeen" target="_blank">TikTok: @bugdeen</a>
-                <a class="contact-link" href="https://www.facebook.com/kittapas.jankul" target="_blank">Facebook: kittapas.jankul</a>
-            </div>
-        </section>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.youtube.com/watch?v=NB5pMwzVVqw" type="audio/mpeg">
+    </audio>
     
-        </div>
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" onclick="toggleMusic()">
+            <i class="fas fa-volume-up" id="musicIcon"></i>
+        </button>
     </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <div class="profile-frame">
+                        <img src="img/IMG_0608.jpg" alt="Profile Picture" onerror="this.src='img/image0.jpg'">
+                    </div>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="profile-info">
+                    <h1>กฤตภาส จันทร์กุล</h1>
+                    <h2>ภูมิ</h2>
+                    <p class="role">Student Developer</p>
+                    <div class="typing-text">
+                        <span id="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="about-section">
+                <div class="section-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>เกี่ยวกับฉัน</h3>
+                </div>
+                <div class="about-content">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">ชื่อ:</span>
+                            <span class="value">กฤตภาส จันทร์กุล (poom)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">อายุ:</span>
+                            <span class="value">16 ปี</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">โรงเรียน:</span>
+                            <span class="value">เบญจมราชรังสฤษฎิ์ 2 ฉะเชิงเทรา</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">สถานะ:</span>
+                            <span class="value status-active">กำลังเรียน</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>สวัสดีครับ ผม ภูมิ หรือ กฤตภาส จันทร์กุล</p>
+                        <p>สนใจด้าน IT เพื่อที่จะศึกษาและพัฒนาทักษะ</p>
+                        <p>เวลาว่างส่วนใหญ่ชอบเล่นเกมเป็นชีวิตจิตใจ</p>
+                        <p>ส่วนด้านกีฬา ชอบเล่นแบตมินตันและกำลังฝึกตีกอล์ฟ</p>
+                        <p>เป็นคนที่ชอบรถมากๆ</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <i class="fas fa-music"></i>
+                    <h3>เพลงประกอบ</h3>
+                </div>
+                <div class="music-player">
+                    <div class="music-info">
+                        <h4>Cambo</h4>
+                        <p>ตามนั้นพวก</p>
+                    </div>
+                    <div class="music-controls">
+                        <button id="playPauseBtn" class="control-btn">
+                            <i class="fas fa-play" id="playIcon"></i>
+                        </button>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-down"></i>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                    </div>
+                    <iframe id="youtubePlayer" width="0" height="0" src="https://www.youtube.com/embed/NB5pMwzVVqw?enablejsapi=1&autoplay=0&loop=1&playlist=NB5pMwzVVqw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>
+                    <audio id="backgroundMusic" loop>
+                        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                        <source src="https://file-examples.com/storage/fe68c1b7b1b1b1b1b1b1b1b/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <div class="section-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>ติดต่อ</h3>
+                </div>
+                <div class="contact-grid">
+                    <a href="https://www.instagram.com/bugdeen/" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Instagram</h4>
+                            <p>@bugdeen</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@bugdeen" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>TikTok</h4>
+                            <p>@bugdeen</p>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/kittapas.jankul" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Facebook</h4>
+                            <p>kittapas.jankul</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 BUGDEEN. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Background particles -->
+    <div class="particles"></div>
+
+    <script>
+        // Typing animation
+        const texts = [
+            'นักเรียนที่สนใจ IT',
+            'ชอบเล่นเกม',
+            'ชอบเล่นกีฬา',
+            'ชอบรถ'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedTextElement = document.getElementById('typed-text');
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(typeText, speed);
+        }
+
+        // Start typing animation
+        typeText();
+
+        // Music section animations
+        const musicSection = document.querySelector('.music-section');
+        if (musicSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        musicSection.style.transform = 'translateY(0)';
+                        musicSection.style.opacity = '1';
+                    }
+                });
+            });
+            observer.observe(musicSection);
+        }
+
+        // Create particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Music control
+        const audio = document.getElementById('backgroundMusic');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playIcon = document.getElementById('playIcon');
+        const volumeSlider = document.getElementById('volumeSlider');
+        let isPlaying = false;
+        let player;
+        let userInteracted = false;
+        
+        // Set initial volume
+        audio.volume = 0.5;
+        
+        // Enable user interaction detection
+        document.addEventListener('click', function() {
+            userInteracted = true;
+        }, { once: true });
+        
+        // YouTube API ready function
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubePlayer', {
+                height: '0',
+                width: '0',
+                videoId: 'NB5pMwzVVqw',
+                playerVars: {
+                    'autoplay': 0,
+                    'loop': 1,
+                    'playlist': 'NB5pMwzVVqw',
+                    'controls': 0,
+                    'showinfo': 0,
+                    'modestbranding': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        
+        function onPlayerReady(event) {
+            console.log('YouTube player ready');
+            player.setVolume(50);
+        }
+        
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                playIcon.className = 'fas fa-pause';
+                isPlaying = true;
+            } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                playIcon.className = 'fas fa-play';
+                isPlaying = false;
+            }
+        }
+        
+        function toggleMusic() {
+            if (!userInteracted) {
+                alert('กรุณาคลิกที่หน้าเว็บก่อนเพื่อเปิดใช้งานเสียง');
+                return;
+            }
+            
+            if (isPlaying) {
+                // Try to pause YouTube video
+                if (player && player.pauseVideo) {
+                    player.pauseVideo();
+                } else {
+                    audio.pause();
+                    playIcon.className = 'fas fa-play';
+                    isPlaying = false;
+                }
+            } else {
+                // Try to play YouTube video first
+                if (player && player.playVideo) {
+                    player.playVideo();
+                } else {
+                    // Fallback to audio or open YouTube
+                    audio.play().catch(e => {
+                        console.log('Audio play failed, opening YouTube:', e);
+                        window.open('https://www.youtube.com/watch?v=NB5pMwzVVqw', '_blank');
+                        playIcon.className = 'fas fa-pause';
+                        isPlaying = true;
+                    });
+                }
+            }
+        }
+        
+        function createBeepSound() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } catch(e) {
+                console.log('Beep sound failed:', e);
+            }
+        }
+        
+        playPauseBtn.addEventListener('click', toggleMusic);
+        
+        // Load YouTube API
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        // Make function global for YouTube API
+        window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+        
+        volumeSlider.addEventListener('input', function() {
+            const volume = this.value;
+            audio.volume = volume / 100;
+            if (player && player.setVolume) {
+                player.setVolume(volume);
+            }
+        });
+        
+        // Old music toggle function for compatibility
+        function toggleMusicOld() {
+            toggleMusic();
+        }
+
+        // Initialize particles
+        createParticles();
+
+        // Enhanced Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Add staggered animation for child elements
+                    const children = entry.target.querySelectorAll('.contact-card, .info-item, .description p');
+                    children.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.style.animationDelay = `${index * 0.1}s`;
+                            child.classList.add('animate');
+                        }, index * 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            scrollObserver.observe(section);
+        });
+
+        // Add floating animation to particles
+        function createFloatingParticles() {
+            const particleCount = 20;
+            const container = document.body;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'floating-particle';
+                particle.style.cssText = `
+                    position: fixed;
+                    width: ${Math.random() * 6 + 2}px;
+                    height: ${Math.random() * 6 + 2}px;
+                    background: rgba(59, 130, 246, ${Math.random() * 0.5 + 0.2});
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: float ${Math.random() * 10 + 10}s linear infinite;
+                `;
+                container.appendChild(particle);
+            }
+        }
+
+        // Add CSS for floating particles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.05);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            
+            .animate {
+                animation-play-state: running !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize floating particles
+        createFloatingParticles();
+
+        // Add mouse follow effect
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Smooth cursor follow animation
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            
+            // Update any cursor-following elements here if needed
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
