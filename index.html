@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - BUGDEEN</title>
+    <title>About poom</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Glowing Orbs -->
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+    
     <!-- Background Music -->
     <audio id="bgMusic" loop>
         <source src="https://www.youtube.com/watch?v=NB5pMwzVVqw" type="audio/mpeg">
@@ -22,17 +41,17 @@
     </div>
 
     <div class="container">
-        <header class="header">
+        <header class="header cosmic-breath holographic hover-transform">
             <div class="profile-section">
                 <div class="profile-image">
-                    <div class="profile-frame">
-                        <img src="img/IMG_0608.jpg" alt="Profile Picture" onerror="this.src='img/image0.jpg'">
+                    <div class="enhanced-profile-frame cyber-glow">
+                        <img src="img/IMG_0608.jpg" alt="Profile Picture" class="profile-img" onerror="this.src='img/image0.jpg'">
                     </div>
                     <div class="status-indicator"></div>
                 </div>
                 <div class="profile-info">
-                    <h1>กฤตภาส จันทร์กุล</h1>
-                    <h2>ภูมิ</h2>
+                    <h1 class="neon-text">กฤตภาส จันทร์กุล</h1>
+                    <h2 class="neon-text">ภูมิ</h2>
                     <p class="role">Student Developer</p>
                     <div class="typing-text">
                         <span id="typed-text"></span>
@@ -43,41 +62,44 @@
         </header>
 
         <main>
-            <section class="about-section">
+            <section class="about-section morph-container energy-pulse hover-glow-intense">
                 <div class="section-header">
                     <i class="fas fa-user-circle"></i>
                     <h3>เกี่ยวกับฉัน</h3>
                 </div>
                 <div class="about-content">
                     <div class="info-grid">
-                        <div class="info-item">
+                        <div class="info-item holographic stagger-fade-in">
                             <span class="label">ชื่อ:</span>
-                            <span class="value">กฤตภาส จันทร์กุล (poom)</span>
+                            <span class="value">ภูมิ (กฤตภาส จันทร์กุล)</span>
                         </div>
-                        <div class="info-item">
+                        <div class="info-item morph-container stagger-fade-in">
                             <span class="label">อายุ:</span>
                             <span class="value">16 ปี</span>
                         </div>
-                        <div class="info-item">
+                        <div class="info-item liquid-wave stagger-fade-in">
                             <span class="label">โรงเรียน:</span>
                             <span class="value">เบญจมราชรังสฤษฎิ์ 2 ฉะเชิงเทรา</span>
                         </div>
-                        <div class="info-item">
+                        <div class="info-item quantum-glitch stagger-fade-in">
                             <span class="label">สถานะ:</span>
                             <span class="value status-active">กำลังเรียน</span>
                         </div>
                     </div>
                     <div class="description">
-                        <p>สวัสดีครับ ผม ภูมิ หรือ กฤตภาส จันทร์กุล</p>
-                        <p>สนใจด้าน IT เพื่อที่จะศึกษาและพัฒนาทักษะ</p>
-                        <p>เวลาว่างส่วนใหญ่ชอบเล่นเกมเป็นชีวิตจิตใจ</p>
-                        <p>ส่วนด้านกีฬา ชอบเล่นแบตมินตันและกำลังฝึกตีกอล์ฟ</p>
-                        <p>เป็นคนที่ชอบรถมากๆ</p>
+                        <p class="cosmic-breath stagger-fade-in">สวัสดีครับ ผม ภูมิ หรือ กฤตภาส จันทร์กุล</p>
+                        <p class="particle-burst stagger-fade-in">สนใจด้าน IT เพื่อที่จะศึกษาและพัฒนาทักษะ</p>
+                        <p class="energy-pulse stagger-fade-in">เวลาว่างส่วนใหญ่ชอบเล่นเกมเป็นชีวิตจิตใจ</p>
+                        <p class="aurora-wave stagger-fade-in">ส่วนด้านกีฬา ชอบเล่นแบตมินตันและกำลังฝึกตีกอล์ฟ</p>
+                        <p class="matrix-rain stagger-fade-in">เป็นคนที่ชอบรถมากๆ</p>
+                        <div class="portfolio-link-container">
+                            <a href="abot.html" class="portfolio-link hover-transform hover-glow-intense">📁 ดูผลงานทั้งหมด</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="music-section">
+            <section class="music-section float-card holographic quantum-glitch">
                 <div class="section-header">
                     <i class="fas fa-music"></i>
                     <h3>เพลงประกอบ</h3>
@@ -86,15 +108,32 @@
                     <div class="music-info">
                         <h4>Cambo</h4>
                         <p>ตามนั้นพวก</p>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span class="time-separator">/</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                            <div id="progressHandle" class="progress-handle"></div>
+                        </div>
                     </div>
                     <div class="music-controls">
-                        <button id="playPauseBtn" class="control-btn">
+                        <button id="playPauseBtn" class="control-btn mobile-friendly">
                             <i class="fas fa-play" id="playIcon"></i>
                         </button>
                         <div class="volume-control">
-                            <i class="fas fa-volume-down"></i>
-                            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
-                            <i class="fas fa-volume-up"></i>
+                            <button id="muteBtn" class="control-btn mobile-friendly">
+                                <i class="fas fa-volume-up" id="muteIcon"></i>
+                            </button>
+                            <div class="volume-slider-container">
+                                <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider mobile-friendly">
+                                <div class="volume-percentage">
+                                    <span id="volumeDisplay">50%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <iframe id="youtubePlayer" width="0" height="0" src="https://www.youtube.com/embed/NB5pMwzVVqw?enablejsapi=1&autoplay=0&loop=1&playlist=NB5pMwzVVqw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>
@@ -106,13 +145,13 @@
                 </div>
             </section>
 
-            <section class="contact-section">
+            <section class="contact-section aurora-wave cosmic-breath">
                 <div class="section-header">
                     <i class="fas fa-envelope"></i>
                     <h3>ติดต่อ</h3>
                 </div>
                 <div class="contact-grid">
-                    <a href="https://www.instagram.com/bugdeen/" target="_blank" class="contact-card">
+                    <a href="https://www.instagram.com/bugdeen/" target="_blank" class="contact-card liquid-wave hover-transform stagger-fade-in">
                         <div class="contact-icon">
                             <i class="fab fa-instagram"></i>
                         </div>
@@ -121,7 +160,7 @@
                             <p>@bugdeen</p>
                         </div>
                     </a>
-                    <a href="https://www.tiktok.com/@bugdeen" target="_blank" class="contact-card">
+                    <a href="https://www.tiktok.com/@bugdeen" target="_blank" class="contact-card energy-pulse hover-glow-intense stagger-fade-in">
                         <div class="contact-icon">
                             <i class="fab fa-tiktok"></i>
                         </div>
@@ -130,7 +169,7 @@
                             <p>@bugdeen</p>
                         </div>
                     </a>
-                    <a href="https://www.facebook.com/kittapas.jankul" target="_blank" class="contact-card">
+                    <a href="https://www.facebook.com/kittapas.jankul" target="_blank" class="contact-card particle-burst hover-transform stagger-fade-in">
                         <div class="contact-icon">
                             <i class="fab fa-facebook"></i>
                         </div>
@@ -221,17 +260,51 @@
         const playPauseBtn = document.getElementById('playPauseBtn');
         const playIcon = document.getElementById('playIcon');
         const volumeSlider = document.getElementById('volumeSlider');
+        const muteBtn = document.getElementById('muteBtn');
+        const muteIcon = document.getElementById('muteIcon');
+        const volumeDisplay = document.getElementById('volumeDisplay');
+        const currentTimeDisplay = document.getElementById('currentTime');
+        const totalTimeDisplay = document.getElementById('totalTime');
+        const progressBar = document.querySelector('.progress-bar');
+        const progressFill = document.getElementById('progressFill');
+        const progressHandle = document.getElementById('progressHandle');
+        
         let isPlaying = false;
         let player;
         let userInteracted = false;
+        let isMuted = false;
+        let previousVolume = 50;
+        let isDragging = false;
         
         // Set initial volume
         audio.volume = 0.5;
         
-        // Enable user interaction detection
+        // Enable user interaction detection and auto-play
+        let autoPlayAttempted = false;
+        
         document.addEventListener('click', function() {
             userInteracted = true;
         }, { once: true });
+        
+        // Auto-play when page loads
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                if (!autoPlayAttempted) {
+                    autoPlayAttempted = true;
+                    attemptAutoPlay();
+                }
+            }, 1000);
+        });
+        
+        function attemptAutoPlay() {
+            if (player && player.playVideo) {
+                player.playVideo();
+            } else {
+                audio.play().catch(e => {
+                    console.log('Auto-play failed, user interaction required:', e);
+                });
+            }
+        }
         
         // YouTube API ready function
         function onYouTubeIframeAPIReady() {
@@ -240,12 +313,13 @@
                 width: '0',
                 videoId: 'NB5pMwzVVqw',
                 playerVars: {
-                    'autoplay': 0,
+                    'autoplay': 1,
                     'loop': 1,
                     'playlist': 'NB5pMwzVVqw',
                     'controls': 0,
                     'showinfo': 0,
-                    'modestbranding': 1
+                    'modestbranding': 1,
+                    'mute': 0
                 },
                 events: {
                     'onReady': onPlayerReady,
@@ -257,23 +331,158 @@
         function onPlayerReady(event) {
             console.log('YouTube player ready');
             player.setVolume(50);
+            // Auto-play when player is ready
+            if (!autoPlayAttempted) {
+                autoPlayAttempted = true;
+                setTimeout(() => {
+                    player.playVideo();
+                }, 500);
+            }
         }
         
         function onPlayerStateChange(event) {
             if (event.data == YT.PlayerState.PLAYING) {
                 playIcon.className = 'fas fa-pause';
                 isPlaying = true;
+                startTimeUpdate();
             } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
                 playIcon.className = 'fas fa-play';
                 isPlaying = false;
+                stopTimeUpdate();
+            }
+        }
+        
+        // Time formatting function
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Time update functions
+        let timeUpdateInterval;
+        
+        function startTimeUpdate() {
+            timeUpdateInterval = setInterval(updateTime, 1000);
+        }
+        
+        function stopTimeUpdate() {
+            if (timeUpdateInterval) {
+                clearInterval(timeUpdateInterval);
+            }
+        }
+        
+        function updateTime() {
+            if (player && player.getCurrentTime && player.getDuration) {
+                const currentTime = player.getCurrentTime();
+                const duration = player.getDuration();
+                
+                if (duration > 0) {
+                    currentTimeDisplay.textContent = formatTime(currentTime);
+                    totalTimeDisplay.textContent = formatTime(duration);
+                    
+                    if (!isDragging) {
+                        const progress = (currentTime / duration) * 100;
+                        progressFill.style.width = progress + '%';
+                        progressHandle.style.left = progress + '%';
+                    }
+                }
+            }
+        }
+        
+        // Mute function
+        function toggleMute() {
+            if (isMuted) {
+                // Unmute
+                volumeSlider.value = previousVolume;
+                audio.volume = previousVolume / 100;
+                if (player && player.setVolume) {
+                    player.setVolume(previousVolume);
+                }
+                muteIcon.className = previousVolume > 50 ? 'fas fa-volume-up' : 'fas fa-volume-down';
+                volumeDisplay.textContent = previousVolume + '%';
+                isMuted = false;
+            } else {
+                // Mute
+                previousVolume = volumeSlider.value;
+                volumeSlider.value = 0;
+                audio.volume = 0;
+                if (player && player.setVolume) {
+                    player.setVolume(0);
+                }
+                muteIcon.className = 'fas fa-volume-mute';
+                volumeDisplay.textContent = '0%';
+                isMuted = true;
+            }
+        }
+        
+        // Progress bar interaction
+        function handleProgressClick(e) {
+            if (player && player.getDuration) {
+                const rect = progressBar.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const percentage = clickX / rect.width;
+                const duration = player.getDuration();
+                const newTime = duration * percentage;
+                
+                if (player.seekTo) {
+                    player.seekTo(newTime);
+                }
+            }
+        }
+        
+        // Progress handle dragging
+        function startDrag(e) {
+            isDragging = true;
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDrag);
+            document.addEventListener('touchmove', drag);
+            document.addEventListener('touchend', stopDrag);
+        }
+        
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const rect = progressBar.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            const dragX = clientX - rect.left;
+            const percentage = Math.max(0, Math.min(100, (dragX / rect.width) * 100));
+            
+            progressFill.style.width = percentage + '%';
+            progressHandle.style.left = percentage + '%';
+            
+            if (player && player.getDuration) {
+                const duration = player.getDuration();
+                const newTime = (duration * percentage) / 100;
+                currentTimeDisplay.textContent = formatTime(newTime);
+            }
+        }
+        
+        function stopDrag(e) {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('mouseup', stopDrag);
+            document.removeEventListener('touchmove', drag);
+            document.removeEventListener('touchend', stopDrag);
+            
+            if (player && player.getDuration) {
+                const rect = progressBar.getBoundingClientRect();
+                const clientX = e.clientX || (e.changedTouches && e.changedTouches[0].clientX);
+                const dragX = clientX - rect.left;
+                const percentage = Math.max(0, Math.min(100, (dragX / rect.width) * 100));
+                const duration = player.getDuration();
+                const newTime = (duration * percentage) / 100;
+                
+                if (player.seekTo) {
+                    player.seekTo(newTime);
+                }
             }
         }
         
         function toggleMusic() {
-            if (!userInteracted) {
-                alert('กรุณาคลิกที่หน้าเว็บก่อนเพื่อเปิดใช้งานเสียง');
-                return;
-            }
+            // Remove user interaction requirement for better UX
             
             if (isPlaying) {
                 // Try to pause YouTube video
@@ -324,6 +533,14 @@
         
         playPauseBtn.addEventListener('click', toggleMusic);
         
+        // Mute button event listener
+        muteBtn.addEventListener('click', toggleMute);
+        
+        // Progress bar event listeners
+        progressBar.addEventListener('click', handleProgressClick);
+        progressHandle.addEventListener('mousedown', startDrag);
+        progressHandle.addEventListener('touchstart', startDrag);
+        
         // Load YouTube API
         const tag = document.createElement('script');
         tag.src = 'https://www.youtube.com/iframe_api';
@@ -333,13 +550,31 @@
         // Make function global for YouTube API
         window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
         
+        // Volume slider event listener with enhanced functionality
         volumeSlider.addEventListener('input', function() {
             const volume = this.value;
             audio.volume = volume / 100;
+            volumeDisplay.textContent = volume + '%';
+            
+            // Update mute icon based on volume
+            if (volume == 0) {
+                muteIcon.className = 'fas fa-volume-mute';
+                isMuted = true;
+            } else {
+                muteIcon.className = volume > 50 ? 'fas fa-volume-up' : 'fas fa-volume-down';
+                isMuted = false;
+                if (volume > 0) {
+                    previousVolume = volume;
+                }
+            }
+            
             if (player && player.setVolume) {
                 player.setVolume(volume);
             }
         });
+        
+        // Initialize volume display
+        volumeDisplay.textContent = volumeSlider.value + '%';
         
         // Old music toggle function for compatibility
         function toggleMusicOld() {
